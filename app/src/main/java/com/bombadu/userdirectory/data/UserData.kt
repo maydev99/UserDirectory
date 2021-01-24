@@ -13,5 +13,4 @@ data class UserData(
     @PrimaryKey(autoGenerate = true)
     val id: Int? = null
 
-) {
-}
+)

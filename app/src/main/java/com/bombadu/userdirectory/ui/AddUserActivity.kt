@@ -1,10 +1,11 @@
-package com.bombadu.userdirectory
+package com.bombadu.userdirectory.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import com.bombadu.userdirectory.R
 
 class AddUserActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
