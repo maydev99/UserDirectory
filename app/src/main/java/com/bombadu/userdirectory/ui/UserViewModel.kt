@@ -29,6 +29,7 @@ class UserViewModel @ViewModelInject constructor(
         _currentUserData.postValue(user)
     }
 
+
     fun deleteUserData(userData: UserData) = viewModelScope.launch {
         repository.deleteUserData(userData)
     }
