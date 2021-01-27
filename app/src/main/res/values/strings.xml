@@ -9,4 +9,5 @@
     <string name="location">Location</string>
     <string name="age">Age</string>
     <string name="save_user_info">Save User Info</string>
+    <string name="auto_generate_entries">Auto Generate Entries</string>
 </resources>

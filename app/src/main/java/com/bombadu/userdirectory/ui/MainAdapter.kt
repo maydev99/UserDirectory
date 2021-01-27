@@ -11,11 +11,14 @@ import com.bombadu.userdirectory.R
 import com.bombadu.userdirectory.data.UserData
 import com.bombadu.userdirectory.databinding.ActivityMainBinding
 
-class MainAdapter(private val interaction: Interaction? = null
+class MainAdapter(val mItemClickListener: ItemClickListener, private val interaction: Interaction? = null
 ) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
 
+    interface  ItemClickListener{
+        fun onItemClick(position: Int)
+    }
 
     companion object {
         //Constants, if any go here
@@ -82,7 +85,7 @@ class MainAdapter(private val interaction: Interaction? = null
 
         init {
             itemView.setOnClickListener {
-                //mItemClickListener.onItemClick(adapterPosition)
+                mItemClickListener.onItemClick(adapterPosition)
 
             }
         }
@@ -96,7 +99,7 @@ class MainAdapter(private val interaction: Interaction? = null
             itemView.setOnClickListener {
 
                 interaction?.onItemSelected(adapterPosition, item)
-               // mItemClickListener.onItemClick(adapterPosition)
+                mItemClickListener.onItemClick(adapterPosition)
 
 
             }

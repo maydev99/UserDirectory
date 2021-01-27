@@ -11,6 +11,6 @@ data class UserData(
     var location: String,
     var age: String,
     @PrimaryKey(autoGenerate = true)
-    val id: Int? = null
+    var id: Int? = null
 
 )

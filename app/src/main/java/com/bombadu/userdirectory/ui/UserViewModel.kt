@@ -10,6 +10,7 @@ import com.bombadu.userdirectory.repository.UserRepository
 import com.bombadu.userdirectory.util.Constants
 import com.bombadu.userdirectory.util.Event
 import com.bombadu.userdirectory.util.Resource
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class UserViewModel @ViewModelInject constructor(
@@ -29,6 +30,9 @@ class UserViewModel @ViewModelInject constructor(
         _currentUserData.postValue(user)
     }
 
+    fun deleteAllUserData() = viewModelScope.launch (Dispatchers.IO) {
+        repository.deleteAllData()
+    }
 
     fun deleteUserData(userData: UserData) = viewModelScope.launch {
         repository.deleteUserData(userData)

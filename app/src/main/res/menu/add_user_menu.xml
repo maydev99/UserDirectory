@@ -11,4 +11,13 @@
 
     </item>
 
+    <item
+        android:id="@+id/auto_gen"
+        android:title="@string/auto_generate_entries"
+        android:orderInCategory="70"
+        app:showAsAction="never">
+
+
+    </item>
+
 </menu>
